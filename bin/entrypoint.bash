@@ -2,7 +2,7 @@
 
 if [ ! -f /data/.wine/winetricks.log ]; then
     echo "Installing wine tricks ..."
-    winetricks fontfix fontsmooth-rgb gdiplus gecko vcrun2008 vcrun2005 d3dx11_43 win7 ie6
+    winetricks fontfix fontsmooth-rgb gdiplus gecko vcrun2008 vcrun2005 d3dx11_43 win7
     bash
     exit
 fi
