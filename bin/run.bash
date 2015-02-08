@@ -4,5 +4,5 @@ IP=`ip addr show docker0 | grep inet | grep global | awk '{print $2}' | awk -F/ 
 
 mkdir -p $HOME/.wine
 
-docker run -t -i --rm -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.wine:/data/.wine -e DISPLAY -e PULSE_SERVER="tcp:$IP:4713" ziyan/wine:$USER
+docker run -t -i --rm --privileged -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.wine:/data/.wine -e DISPLAY -e PULSE_SERVER="tcp:$IP:4713" ziyan/wine:$USER
 
